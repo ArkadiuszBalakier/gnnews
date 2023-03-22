@@ -1,12 +1,8 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-
 export const CardItem = ({ news }) => {
   const { author, publishedAt, urlToImage, title } = news;
+  console.log(author);
   return (
-    <li sx={{ maxWidth: 345 }}>
+    <li>
       <img src={urlToImage} alt="news image" />
       <div>
         <h1 gutterBottom variant="h5" component="div">

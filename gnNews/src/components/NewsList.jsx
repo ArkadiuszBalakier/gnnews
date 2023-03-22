@@ -6,7 +6,6 @@ export const NewsList = () => {
     return state.news.news;
   });
 
-  console.log(newsList);
   return (
     <ul>
       {newsList &&
