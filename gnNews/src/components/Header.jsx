@@ -27,7 +27,7 @@ export const Header = () => {
         <span>gnNews</span>
       </Link>
       <Stack direction="row" alignItems="center" spacing={2}>
-        <IconButton color="primary">
+        <IconButton onClick={() => handleCardtoggle()} color="primary">
           <FormatListBulletedRoundedIcon />
         </IconButton>
         <Button variant="outlined" onClick={() => handleClick()}>

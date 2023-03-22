@@ -1,12 +1,16 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { newsData } from "../store";
 
 import { NewsList } from "../components/NewsList";
+import { NewsCart } from "../components/NewsCart";
 
 export const Home = () => {
   const dispatch = useDispatch();
+  const cardTrigger = useSelector((state) => {
+    return state.cardToggle.trigger;
+  });
 
   useEffect(() => {
     axios
@@ -15,13 +19,9 @@ export const Home = () => {
       )
       .then((res) => {
         const data = res.data;
-          dispatch(newsData(data.articles));
+        dispatch(newsData(data.articles));
       });
   }, []);
 
-  return (
-    <section>
-      <NewsList />
-    </section>
-  );
+  return <section>{cardTrigger ? <NewsList /> : <NewsCart />}</section>;
 };
