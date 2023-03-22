@@ -1,13 +1,12 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { newsData } from "../store";
+
+import { NewsList } from "../components/NewsList";
 
 export const Home = () => {
   const dispatch = useDispatch();
-  const newsList = useSelector((state) => {
-    return state.news.news;
-  });
 
   useEffect(() => {
     axios
@@ -16,12 +15,13 @@ export const Home = () => {
       )
       .then((res) => {
         const data = res.data;
-        console.log(data);
-        dispatch(newsData(data.articles));
+          dispatch(newsData(data.articles));
       });
   }, []);
 
-  console.log(newsList);
-
-  return <section>Home</section>;
+  return (
+    <section>
+      <NewsList />
+    </section>
+  );
 };
