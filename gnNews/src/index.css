@@ -13,16 +13,30 @@ main {
 
 header {
   height: 90px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(66, 140, 238, 0.16) 0px 10px 36px 0px,
+    rgba(66, 140, 238, 0.06) 0px 0px 0px 1px;
   border-radius: 5px;
   margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header :link {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 46px;
+  padding: 5px;
+}
+
+header span {
+  color: rgba(66, 140, 238);
 }
 
 footer {
   height: 90px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(66, 140, 238, 0.16) 0px 10px 36px 0px,
+    rgba(66, 140, 238, 0.06) 0px 0px 0px 1px;
   border-radius: 5px;
   margin: 5px;
   display: flex;
@@ -30,11 +44,12 @@ footer {
   align-items: center;
   font-size: larger;
   font-weight: bolder;
+  color: rgba(66, 140, 238);
 }
 
 section {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(66, 140, 238, 0.16) 0px 10px 36px 0px,
+    rgba(66, 140, 238, 0.06) 0px 0px 0px 1px;
   border-radius: 5px;
   margin: 5px;
 }
