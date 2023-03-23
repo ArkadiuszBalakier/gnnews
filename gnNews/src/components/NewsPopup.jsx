@@ -1,8 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { newsPopupTrigger } from "../store";
 import "./NewsPopup.css";
 
-export const NewsPopup = () => {
+export const NewsPopup = ({ newsToPopup }) => {
+  const { author, description, url } = newsToPopup || {};
   const trigger = useSelector((state) => {
     return state.newsPopup.trigger;
   });
@@ -10,21 +12,19 @@ export const NewsPopup = () => {
 
   return trigger ? (
     <div
-      className="popup"
+      className="news-popup"
       onClick={() => {
         dispatch(newsPopupTrigger());
       }}
     >
-      <div className="popup-inner">
-        <h1>Dzień dobry</h1>
-        <p>Chiałem na wstępie podziękować za szanse😊</p>
-        <p>Największą trudnością w zadaniu są dla mnie :</p>
-        <p>TypeScript i react-test-lib.</p>
-        <p>
-          Rozumiem sposób działania i ich cel (kurs reac typescrip już mam
-          kupiony)
-        </p>
-        <p>Niemiałem jeszcze możliwości popracowania z nimi</p>
+      <div className="news-popup-inner">
+        <h1 className="author">{author}</h1>
+        <p className="news">"News"</p>
+        <p className="description">{description}</p>
+        <span>do you want to know more?</span>
+        <Link className="link" to={url}>
+          {url}
+        </Link>
       </div>
     </div>
   ) : (

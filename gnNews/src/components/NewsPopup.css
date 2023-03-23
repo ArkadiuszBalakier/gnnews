@@ -1,4 +1,4 @@
-.popup {
+.news-popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,10 +11,35 @@
   align-items: center;
 }
 
-.popup-inner {
+.news-popup-inner {
   position: relative;
   padding: 32px;
   width: 100%;
-  max-width: 740px;
+  max-width: 920px;
   background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.author {
+  margin-bottom: 5px;
+  border-bottom: 1px solid;
+}
+
+.news {
+  margin-bottom: 5px;
+}
+
+.description {
+  padding: 5px;
+  font-size: large;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(66, 140, 238);
+}
+
+.link {
+  padding: 2px;
+  font-size: small;
 }
