@@ -15,7 +15,17 @@ export const Popup = () => {
         dispatch(changeTrigger());
       }}
     >
-      <div className="popup-inner">yo</div>
+      <div className="popup-inner">
+        <h1>Dzień dobry</h1>
+        <p>Chiałem na wstępie podziękować za szanse😊</p>
+        <p>Największą trudnością w zadaniu są dla mnie :</p>
+        <p>TypeScript i react-test-lib.</p>
+        <p>
+          Rozumiem sposób działania i ich cel (kurs reac typescrip już mam
+          kupiony)
+        </p>
+        <p>Niemiałem jeszcze możliwości popracowania z nimi</p>
+      </div>
     </div>
   ) : (
     ""

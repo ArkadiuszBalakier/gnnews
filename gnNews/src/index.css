@@ -16,7 +16,7 @@ header {
   box-shadow: rgba(66, 140, 238, 0.16) 0px 10px 36px 0px,
     rgba(66, 140, 238, 0.06) 0px 0px 0px 1px;
   border-radius: 5px;
-  margin: 5px;
+  margin: 5px 5px 15px 5px;
   display: flex;
   align-items: center;
   justify-content: space-around;
