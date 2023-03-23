@@ -12,7 +12,7 @@ export const CartItem = ({ news }) => {
         <CardMedia
           component="img"
           sx={{ padding: "1px" }}
-          image={!news.urlToImage ? noImage : news.urlToImage}
+          image={news.urlToImage ? news.urlToImage : noImage}
           title={news.title}
         />
         <CardContent>

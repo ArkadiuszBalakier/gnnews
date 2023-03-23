@@ -23,6 +23,5 @@ export const Home = () => {
       });
   }, []);
 
-  console.log(cardTrigger);
   return <>{cardTrigger ? <NewsCart /> : <NewsList />}</>;
 };

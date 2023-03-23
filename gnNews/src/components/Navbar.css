@@ -1,0 +1,17 @@
+h1 {
+  color: rgba(66, 140, 238);
+  text-align: center;
+  padding: 5px;
+  margin-top: 5px;
+  font-weight: 100;
+}
+
+.country {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  width: 15px;
+}
